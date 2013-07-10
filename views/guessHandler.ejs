@@ -1,0 +1,51 @@
+<html>
+	<title>
+		Guess
+	</title>
+    
+	<Head>
+		<link rel='stylesheet'type= "text/css"  href='/stylesheets/gamestyle.css' />
+		Guess number: <b><%= i+1%></b>
+	</Head>
+	
+	<body>
+		 <table border="1">
+		<tr>
+		<th>Guess</th>
+		<th>Answer</th>
+		</tr>
+
+		<% 
+			var g = 0;
+		  	for( g = 0; g < guessHistory.length; g++ ) {
+		%>
+
+		<tr>
+		<td><b><%= guessHistory[g]%></b></td>
+		<td><b><%= answerHistory[g]%></b></td>
+		</tr>
+
+		<% } %>
+
+		</table>
+
+		<%
+			if( guess ) {
+		%>
+		
+			<p>User guessed: <b> <%= guess %> </b>
+			<p>Need to guess: <b> <%= answer1 %> </b>
+		
+		<% } %>		
+
+		<h2>
+                        <form method= 'post' action='/guessHandler' >
+			<span> Enter a number </span>
+			<input type= 'number' name= 'userguess' />
+			<input type='submit' value= 'Guess Now' />
+			</form> 
+		</h2>
+	
+	</body>
+
+</html>

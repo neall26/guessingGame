@@ -1,0 +1,23 @@
+<html>
+		<title>
+		Guess
+		</title>
+<link rel='stylesheet'type= "text/css"  href='/stylesheets/gamestyle.css' />
+    
+	<Head>
+	Guessing Game
+	</Head>
+	<body>
+	<p>User guessed <b> <%= guess %> </b>
+	<p>Need to guess <b> <%= answer1 %> </b>
+		<h2>
+		
+                        <form method= 'post' action='/guess3' >
+			<span> Enter a number </span>
+			<input type= 'text' name= 'userguess' />
+			<input type='submit' value= 'Guess Now' />
+			</form> 
+		</h2>
+	</body>
+
+</html>

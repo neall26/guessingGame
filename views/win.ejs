@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			Winner
+	
+		</title>
+		<link rel='stylesheet'type= "text/css"  href='/stylesheets/gamestyle.css' />
+
+	</head>
+		You Won!
+	<body>
+	<table border="1">
+	<tr>
+	<th>Guess</th>
+	<th>Answer</th>
+	</tr>
+
+	<% 
+		var g = 0;
+  		for( g = 0; g < guessHistory.length; g++ ) {
+	%>
+
+	<tr>
+	<td><b><%= guessHistory[g]%></b></td>
+	<td><b><%= answerHistory[g]%></b></td>
+	</tr>
+
+	<% } %>
+	</table>
+		<h2>
+			Good job, you guessed <b> <%= computerGuess%> </b>
+		</h2>
+	<form method= 'post' action= '/'>
+	<input type= 'submit' value= ' Want to try again?' >
+	
+	</body>
+</html>
